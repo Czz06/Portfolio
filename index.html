@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Desarrollador Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="glass">
+        <div class="nav-container">
+            <span class="logo">DevPortfolio.</span>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-bg-circle"></div>
+        <div class="container hero-container">
+            <div class="hero-image-wrapper animate-on-scroll">
+                <div class="img-glow"></div>
+                <img src="" alt="Avatar" id="hero-avatar" class="glass">
+            </div>
+            <div class="hero-text animate-on-scroll">
+                <h1 id="hero-title"></h1>
+                <p id="hero-subtitle"></p>
+                <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Sobre <span class="highlight">Mí</span></h2>
+            <div class="about-card glass animate-on-scroll">
+                <p id="about-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="educacion" class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Trayectoria Educativa</h2>
+            <div class="timeline" id="education-timeline">
+                </div>
+        </div>
+    </section>
+
+    <section id="habilidades" class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Mis Habilidades</h2>
+            
+            <h3 class="subsection-title animate-on-scroll">Hard Skills</h3>
+            <div class="skills-grid" id="hard-skills">
+                </div>
+
+            <h3 class="subsection-title animate-on-scroll" style="margin-top: 2rem;">Soft Skills</h3>
+            <div class="skills-grid" id="soft-skills">
+                </div>
+
+            <div class="tech-tags animate-on-scroll" id="tech-tags">
+                </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Mis Proyectos</h2>
+            <div class="projects-grid" id="projects-grid">
+                </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Información de Contacto</h2>
+            
+            <div class="contact-layout">
+                <div class="contact-left-column animate-on-scroll">
+                    <div class="contact-info" id="contact-info">
+                        </div>
+                    
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem; font-size: 1.2rem;">Sígueme en redes</h3>
+                    <div class="social-links" id="social-links">
+                        </div>
+                </div>
+                
+                <div class="cv-card glass animate-on-scroll">
+                    <h3>Descarga mi CV</h3>
+                    <p>Obtén una versión detallada de mi experiencia y habilidades para tu proceso de selección.</p>
+                    <div class="cv-buttons">
+                        <button class="btn btn-primary">📄 Descargar PDF</button>
+                        <button class="btn btn-outline">📝 Descargar DOCX</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer class="glass">
+        <p>&copy; 2025 Portfolio Personal. Diseñado con código puro.</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
