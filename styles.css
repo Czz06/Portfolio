@@ -1,24 +1,26 @@
-/* === VARIABLES & RESET (HOVER SKILLS POTENTE + FONDO CALMADO) === */
+/* === VARIABLES & RESET === */
 :root {
-    /* Paleta de Colores Dark Mode */
-    --bg-main: #0b1120;      /* Azul muy profundo */
-    --text-main: #ffffff;    /* Blanco puro */
-    --text-muted: #cbd5e1;   /* Gris claro */
     
-    /* Acentos Neón */
-    --primary: #3b82f6;      /* Azul eléctrico */
-    --secondary: #8b5cf6;    /* Violeta vibrante */
-    --accent: #22d3ee;       /* Cian Neón (Para resaltar) */
+    --bg-main: #0f172a;     
     
-    /* Dark Glassmorphism */
-    --glass-bg: rgba(15, 23, 42, 0.6); 
-    --glass-border: rgba(255, 255, 255, 0.1);
-    --glass-blur: blur(16px);
-    --glass-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+   
+    --text-main: #ffffff;    
+    --text-muted: #e2e8f0;   
     
-    --font-main: 'Arial', sans-serif;;
+  
+    --primary: #60a5fa;      
+    --secondary: #a78bfa;    
+    --accent: #22d3ee;      
+    
+ 
+    --glass-bg: rgba(15, 23, 42, 0.8); 
+    --glass-border: rgba(255, 255, 255, 0.15); 
+    --glass-blur: blur(12px);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    
+    /* Tipografía */
+    --font-main: 'Arial', sans-serif;
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -54,7 +56,7 @@ body {
     border-radius: 50%;
     filter: blur(90px);
     opacity: 0.4;
-    /* CAMBIO: Animación mucho más lenta (25s) y suave */
+    
     animation: floatBlob 25s infinite ease-in-out alternate;
 }
 
@@ -77,7 +79,7 @@ body {
     animation-delay: -10s;
 }
 
-/* CAMBIO: Movimiento reducido (casi quieto, solo respira) */
+
 @keyframes floatBlob {
     0% { transform: translate(0, 0) scale(1); }
     100% { transform: translate(15px, 15px) scale(1.05); }
