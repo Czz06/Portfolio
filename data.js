@@ -1,7 +1,8 @@
 const portfolioData = {
     hero: {
-        avatar: "https://media.licdn.com/dms/image/v2/D4E03AQGdEXZs_Cfi5g/profile-displayphoto-shrink_200_200/B4EZcUGrQjHQAY-/0/1748388985002?e=1767830400&v=beta&t=0K5wK7EZZNazZX1Rsqn4M8k5KbIDtZbHk5D_u1qUn88",
+        avatar: "https://media.licdn.com/dms/image/v2/D4E03AQGdEXZs_Cfi5g/profile-displayphoto-shrink_800_800/B4EZcUGrQjHQAc-/0/1748388985002?e=1767830400&v=beta&t=zoBg7ZFRtshttrHqilIyFIw94JxrOHZsA1dtXitKVK4",
         titleStart: "Hola, soy Alejandro.",
+        titleEnd: "",
         subtitle: "Estudiante de DAM apasionado por crear aplicaciones web modernas, funcionales y escalables."
     },
     about: "Actualmente cursando el Grado Superior en DAM, me apasiona entender no solo cómo usar las herramientas, sino cómo funcionan por dentro. Me considero una persona curiosa y autodidacta, siempre buscando el siguiente reto técnico para convertir ideas complejas en código limpio y eficiente.",
