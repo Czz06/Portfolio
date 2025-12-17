@@ -12,7 +12,7 @@ function loadData() {
     // 2. About
     document.getElementById('about-text').textContent = portfolioData.about;
 
-    // 3. Education (Sin puntos azules)
+    // 3. Education
     const educationContainer = document.getElementById('education-timeline');
     portfolioData.education.forEach((edu, index) => {
         const item = document.createElement('div');
@@ -56,7 +56,7 @@ function loadData() {
         tagsContainer.appendChild(pill);
     });
 
-    // 5. Projects
+    // 5. Projects (MODIFICADO: UN SOLO BOTÓN A GITHUB)
     const projectsContainer = document.getElementById('projects-grid');
     portfolioData.projects.forEach((proj, index) => {
         const card = document.createElement('div');
@@ -65,6 +65,9 @@ function loadData() {
         
         const tagsHtml = proj.tags.map(tag => `<span class="badge-sm">${tag}</span>`).join('');
         
+        // Usamos la URL de data.js o '#' si no existe
+        const githubLink = proj.githubUrl || '#';
+
         card.innerHTML = `
             <div class="project-img" style="background-image: url('${proj.image}')"></div>
             <div class="project-content">
@@ -72,8 +75,9 @@ function loadData() {
                 <div class="project-badges">${tagsHtml}</div>
                 <p style="margin-bottom: 1.5rem; color: #555;">${proj.desc}</p>
                 <div class="project-actions">
-                    <button class="btn btn-primary" style="flex:1; font-size: 0.9rem;">Ver Demo</button>
-                    <button class="btn btn-outline" style="flex:1; font-size: 0.9rem;">Código</button>
+                    <a href="${githubLink}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="width: 100%; text-align: center;">
+                        Dirigir a GitHub
+                    </a>
                 </div>
             </div>
         `;
