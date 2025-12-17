@@ -56,7 +56,7 @@ function loadData() {
         tagsContainer.appendChild(pill);
     });
 
-    // 5. Projects (MODIFICADO: UN SOLO BOTÓN A GITHUB)
+    // 5. Projects
     const projectsContainer = document.getElementById('projects-grid');
     portfolioData.projects.forEach((proj, index) => {
         const card = document.createElement('div');
@@ -65,7 +65,6 @@ function loadData() {
         
         const tagsHtml = proj.tags.map(tag => `<span class="badge-sm">${tag}</span>`).join('');
         
-        // Usamos la URL de data.js o '#' si no existe
         const githubLink = proj.githubUrl || '#';
 
         card.innerHTML = `
@@ -110,12 +109,9 @@ function loadData() {
         const link = document.createElement('a');
         link.href = social.url;
         link.className = 'social-circle glass';
-        link.target = "_blank"; // Abre en nueva pestaña
-        link.rel = "noopener noreferrer"; // Seguridad
-        
-        // Permite insertar imagen HTML o texto
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
         link.innerHTML = social.image; 
-        
         socialContainer.appendChild(link);
     });
 }
@@ -139,39 +135,4 @@ function initObserver() {
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.observe(el);
     });
-  // === EFECTO TILT 3D (VERSIÓN SUAVE) ===
-document.addEventListener('mousemove', (e) => {
-    const cards = document.querySelectorAll('.glass');
-
-    cards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        // Verificar si el ratón está sobre la tarjeta
-        if (
-            e.clientX >= rect.left && 
-            e.clientX <= rect.right && 
-            e.clientY >= rect.top && 
-            e.clientY <= rect.bottom
-        ) {
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            // --- AQUÍ ESTÁ EL CAMBIO ---
-            // Antes dividíamos por 20. Ahora por 80 para que sea muy sutil.
-            const rotateX = ((y - centerY) / 80) * -1; 
-            const rotateY = (x - centerX) / 80;
-
-            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-            
-            // Hacemos la transición un poco más lenta (0.2s) para que se sienta más "pesado" y premium
-            card.style.transition = 'transform 0.2s ease-out'; 
-        } else {
-            // Retorno a la posición original
-            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
-            card.style.transition = 'transform 0.5s ease'; 
-        }
-    });
-});
 }

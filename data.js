@@ -1,11 +1,10 @@
 const portfolioData = {
     hero: {
-        avatar: "https://ui-avatars.com/api/?name=Alejandro+Chen&background=2563eb&color=fff&size=300",
+        avatar: "https://media.licdn.com/dms/image/v2/D4E03AQGdEXZs_Cfi5g/profile-displayphoto-shrink_200_200/B4EZcUGrQjHQAY-/0/1748388985002?e=1767830400&v=beta&t=0K5wK7EZZNazZX1Rsqn4M8k5KbIDtZbHk5D_u1qUn88",
         titleStart: "Hola, soy Alejandro.",
-        titleEnd: "",
         subtitle: "Estudiante de DAM apasionado por crear aplicaciones web modernas, funcionales y escalables."
     },
-    about: "Soy un desarrollador en formación con un fuerte enfoque en el código limpio y la arquitectura de software. Actualmente cursando el Grado Superior en Desarrollo de Aplicaciones Multiplataforma, combino mi aprendizaje académico con proyectos personales. Me especializo en resolver problemas complejos mediante lógica estructurada y disfruto aprendiendo nuevas tecnologías constantemente.",
+    about: "Actualmente cursando el Grado Superior en DAM, me apasiona entender no solo cómo usar las herramientas, sino cómo funcionan por dentro. Me considero una persona curiosa y autodidacta, siempre buscando el siguiente reto técnico para convertir ideas complejas en código limpio y eficiente.",
     education: [
         {
             year: "2024 - Presente",
@@ -17,7 +16,7 @@ const portfolioData = {
             year: "2022 - 2024",
             title: "Bachillerato Tecnológico",
             institution: "Colegio Internacional Legamar",
-            desc: "Base sólida en matemáticas, tecnología industrial y fundamentos de ingeniería."
+            desc: "Base sólida en matemáticas y tecnología."
         }
     ],
     skills: {
@@ -41,16 +40,9 @@ const portfolioData = {
         {
             title: "Gestor de Inventario (Cine)",
             desc: "Aplicación Spring-boot, crud para gestionar stock de productos con conexión a base de datos relacional utilizando el UI de swagger",
-            image: "https://pnx-assets-prod.s3.amazonaws.com/2020-07/swagger_logo_1.png",
+            image: "https://tse2.mm.bing.net/th/id/OIP.fTN8mWwhZUVfDxlBYrZK4wHaD7?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3",
             tags: ["Java", "SQL", "Git"],
             githubUrl: "https://github.com/Czz06/Sprint-Boot" 
-        },
-        {
-            title: "App de Finanzas Personal",
-            desc: "Aplicación web responsive para el seguimiento de gastos y presupuestos mensuales.",
-            image: "https://via.placeholder.com/400x240/0ea5e9/ffffff?text=Finance+Web",
-            tags: ["HTML", "CSS", "JavaScript"],
-            githubUrl: "https://github.com/tu-usuario/app-finanzas" // <-- CAMBIA ESTO
         },
         {
             title: "Portfolio Personal",
@@ -60,7 +52,6 @@ const portfolioData = {
             githubUrl: "https://github.com/Czz06/Portfolio" 
         }
     ],
-    // ---------------------------------------------------------
     contact: {
         email: "alejandrochen0220@gmail.com",
         phone: "+34 652 088 770",
