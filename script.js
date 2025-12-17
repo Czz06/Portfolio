@@ -139,4 +139,39 @@ function initObserver() {
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
         observer.observe(el);
     });
+  // === EFECTO TILT 3D (VERSIÓN SUAVE) ===
+document.addEventListener('mousemove', (e) => {
+    const cards = document.querySelectorAll('.glass');
+
+    cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Verificar si el ratón está sobre la tarjeta
+        if (
+            e.clientX >= rect.left && 
+            e.clientX <= rect.right && 
+            e.clientY >= rect.top && 
+            e.clientY <= rect.bottom
+        ) {
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            
+            // --- AQUÍ ESTÁ EL CAMBIO ---
+            // Antes dividíamos por 20. Ahora por 80 para que sea muy sutil.
+            const rotateX = ((y - centerY) / 80) * -1; 
+            const rotateY = (x - centerX) / 80;
+
+            card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+            
+            // Hacemos la transición un poco más lenta (0.2s) para que se sienta más "pesado" y premium
+            card.style.transition = 'transform 0.2s ease-out'; 
+        } else {
+            // Retorno a la posición original
+            card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)`;
+            card.style.transition = 'transform 0.5s ease'; 
+        }
+    });
+});
 }

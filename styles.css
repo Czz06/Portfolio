@@ -528,3 +528,74 @@ footer {
     .contact-left-column { text-align: center; }
     .contact-item { justify-content: center; }
 }
+/* === FONDO ANIMADO (Blobs) === */
+.hero-section {
+    /* Asegúrate de que esto esté así para que no se salgan las bolas */
+    position: relative;
+    overflow: hidden; 
+}
+
+.background-blobs {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1; /* Detrás de todo */
+    pointer-events: none; /* Para que no moleste al clic */
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px); /* El truco para que parezca luz difusa */
+    opacity: 0.6;
+    animation: floatBlob 10s infinite ease-in-out alternate;
+}
+
+.blob-1 {
+    top: 10%; left: 10%; width: 500px; height: 500px;
+    background: var(--primary);
+    animation-delay: 0s;
+}
+
+.blob-2 {
+    bottom: 20%; right: 10%; width: 400px; height: 400px;
+    background: var(--secondary);
+    animation-delay: -2s;
+}
+
+.blob-3 {
+    top: 40%; left: 40%; width: 300px; height: 300px;
+    background: #8b5cf6; /* Un tono violeta extra para contraste */
+    animation-delay: -4s;
+}
+
+@keyframes floatBlob {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+.glass {
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+.gradient-text {
+    background: linear-gradient(
+        45deg, 
+        var(--primary), 
+        var(--secondary), 
+        #8b5cf6, 
+        var(--primary)
+    );
+    background-size: 300% 300%; /* Hacemos el fondo más grande */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientFlow 6s ease infinite; /* Animación continua */
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
